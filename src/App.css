@@ -1,42 +1,228 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Basic reset and layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+}
+
+.App {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  background: #222222;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styles */
+.header {
+  background-color: #a11d22;
+  color: rgb(255, 255, 255);
+  padding: 29px 0 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: 500px;
+  letter-spacing: 9px;
+}
+
+/* Search bar in header */
+.header-search {
+  background: white;
+  border-radius: 8px;
+  padding: 4px 16px;
+  display: flex;
+  align-items: center;
+  min-width: 320px;
+  max-width: 400px;
+}
+
+.header-search input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 8px 0;
+  width: 100%;
+  background: transparent;
+}
+
+/* Search form styles */
+.search-form {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex-grow: 1;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+/* Movies grid */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  margin-left: 90px;
+  margin-right: 90px;
+  justify-items: center;
+}
+
+.movie-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 15px;
+}
+
+.movie-title {
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.movie-year {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Movie detail overlay */
+.movie-detail-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.movie-detail {
+  background: white;
+  border-radius: 8px;
+  max-width: 1000px;
+  width: 90%;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.detail-content {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.detail-poster {
+  width: 300px;
+  border-radius: 8px;
+}
+
+.detail-info {
+  flex: 1;
+}
+
+.detail-info h2 {
+  margin-bottom: 15px;
+}
+
+.detail-info p {
+  margin-bottom: 10px;
+}
+
+/* Loading and error states */
+.loading {
   text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #ffffff;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.error {
+  color: #d9534f;
+  padding: 10px;
+  background-color: #f8d7da;
+  border-radius: 4px;
+  margin: 20px 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive design */
+@media (max-width: 768px) {
+  .detail-content {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .detail-poster {
+    width: 100%;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
