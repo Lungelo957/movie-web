@@ -1,12 +1,52 @@
-# React + Vite
+# 🎬 Movie Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React.js web application to search and browse movies and series using the OMDb API.
 
-Currently, two official plugins are available:
+## Features
+- Search for movies and series by title
+- Tab navigation for Movies and Series
+- Display results with title, poster, and year
+- View detailed information for each movie/series
+- Pagination to browse more than 10 results
+- Automatically changing background images
+- Responsive design
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## Expanding the ESLint configuration
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/Lungelo957/movie-web.git
+   cd movie-web
+   ```
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+3. **Add your OMDb API key:**
+   - Create a `.env` file in the root directory.
+   - Add this line:
+     ```
+     REACT_APP_OMDB_API_KEY=your_api_key_here
+     ```
+4. **Start the development server:**
+   ```sh
+   npm start
+   ```
+5. **Open your browser:**
+   - Go to `http://localhost:3000`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Usage
+- Use the search bar to find movies or series.
+- Switch between Movies and Series tabs.
+- Click on a movie/series card to view details.
+- Use pagination controls to browse more results.
+
+## Technologies
+- React.js
+- OMDb API
+- CSS
+- JavaScript
+- HTML
+
+## License
+MIT
