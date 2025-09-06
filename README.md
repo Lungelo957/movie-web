@@ -1,6 +1,6 @@
-# 🎬 Movie Web App (Capstone Project)
+#  Movie Web App (Capstone Project)
 
-## 📌 Overview
+##  Overview
 This project is my **Frontend Capstone Project**, built with **React.js**.  
 It is a simple Movie & Series Explorer that allows users to:
 - View Movies (default list under Movies tab).
@@ -15,7 +15,7 @@ The project demonstrates my ability to:
 
 ---
 
-## 🚀 Features
+##  Features
 - **Movies Tab** → Displays a default list of movies.
 - **Series Tab** → Displays a default list of TV series.
 - **Search Bar** → Search for any movie/series by title.
@@ -24,11 +24,9 @@ The project demonstrates my ability to:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 - React.js
 - JavaScript (ES6+)
-- Vanilla CSS
-- HTML
 - OMDb API
 - GitHub (Version Control)
 
