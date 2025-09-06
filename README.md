@@ -1,52 +1,49 @@
-# 🎬 Movie Web
+#  Movie Web App (Capstone Project)
 
-A React.js web application to search and browse movies and series using the OMDb API.
+##  Overview
+This project is my **Frontend Capstone Project**, built with **React.js**.  
+It is a simple Movie & Series Explorer that allows users to:
+- View Movies (default list under Movies tab).
+- View Series (default list under Series tab).
+- Search for any Movie or Series using the OMDb API.
 
-## Features
-- Search for movies and series by title
-- Tab navigation for Movies and Series
-- Display results with title, poster, and year
-- View detailed information for each movie/series
-- Pagination to browse more than 10 results
-- Automatically changing background images
-- Responsive design
+The project demonstrates my ability to:
+- Use React.js for building UI components.
+- Integrate an external API (OMDb API).
+- Manage state and user input in React.
+- Organize code in a GitHub repository.
 
-## Getting Started
+---
 
-1. **Clone the repository:**
-   ```sh
-   git clone https://github.com/Lungelo957/movie-web.git
-   cd movie-web
-   ```
-2. **Install dependencies:**
-   ```sh
-   npm install
-   ```
-3. **Add your OMDb API key:**
-   - Create a `.env` file in the root directory.
-   - Add this line:
-     ```
-     REACT_APP_OMDB_API_KEY=your_api_key_here
-     ```
-4. **Start the development server:**
-   ```sh
-   npm start
-   ```
-5. **Open your browser:**
-   - Go to `http://localhost:3000`
+##  Features
+- **Movies Tab** → Displays a default list of movies.
+- **Series Tab** → Displays a default list of TV series.
+- **Search Bar** → Search for any movie/series by title.
+- **Dynamic Fetching** → Uses the OMDb API in real-time.
+- **Error Handling** → Shows “No results found” if nothing matches.
 
-## Usage
-- Use the search bar to find movies or series.
-- Switch between Movies and Series tabs.
-- Click on a movie/series card to view details.
-- Use pagination controls to browse more results.
+---
 
-## Technologies
+##  Tech Stack
 - React.js
+- JavaScript (ES6+)
 - OMDb API
-- CSS
-- JavaScript
-- HTML
+- GitHub (Version Control)
 
-## License
-MIT
+---
+
+## 🔑 API Key
+This project uses the [OMDb API](http://www.omdbapi.com/).  
+You can sign up for a free key, but for demo purposes I used my key in this project.  
+
+---
+
+## 📸 Demo
+👉 [Insert your Loom Video Link here]  
+
+---
+
+## ⚙️ Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Lungelo957/movie-web.git
