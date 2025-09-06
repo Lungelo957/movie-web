@@ -20,26 +20,23 @@ const Home = () => {
     setLoading(true);
     setError('');
     setSearchQuery(query);
-    if (activeTab === 'movies') {
-      const data = await searchMovies(query, pageNum);
-      if (data.Response === 'True') {
+    let type = activeTab === 'movies' ? 'movie' : 'series';
+    const data = await searchMovies(query, pageNum, type);
+    if (data.Response === 'True') {
+      if (type === 'movie') {
         setMovies(data.Search);
-        setTotalResults(parseInt(data.totalResults, 10));
       } else {
-        setError(data.Error);
-        setMovies([]);
-        setTotalResults(0);
-      }
-    } else {
-      const data = await searchMovies(query + '&type=series', pageNum);
-      if (data.Response === 'True') {
         setSeries(data.Search);
-        setTotalResults(parseInt(data.totalResults, 10));
-      } else {
-        setError(data.Error);
-        setSeries([]);
-        setTotalResults(0);
       }
+      setTotalResults(parseInt(data.totalResults, 10));
+    } else {
+      setError(data.Error);
+      if (type === 'movie') {
+        setMovies([]);
+      } else {
+        setSeries([]);
+      }
+      setTotalResults(0);
     }
     setLoading(false);
   };
