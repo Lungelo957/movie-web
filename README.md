@@ -32,6 +32,9 @@ The project demonstrates my ability to:
 
 ---
 
+## website link
+- https://movie-web-alx.netlify.app
+
 ## 🔑 API Key
 This project uses the [OMDb API](http://www.omdbapi.com/).  
 You can sign up for a free key, but for demo purposes I used my key in this project.  
@@ -39,7 +42,7 @@ You can sign up for a free key, but for demo purposes I used my key in this proj
 ---
 
 ## 📸 Demo
-👉 [Insert your Loom Video Link here]  
+👉 https://www.loom.com/share/34491c1eecba4c19bc1f736b4a7559f3?sid=a2aee782-0caa-4bea-a918-842583e40965 
 
 ---
 
